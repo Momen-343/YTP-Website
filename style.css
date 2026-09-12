@@ -103,6 +103,7 @@ body {
     width: 100%;
     border-radius: 20px;
     background-color: var(--secondary-color);
+    background: linear-gradient(180deg, var(--secondary-color), rgb(37, 35, 71));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,6 +138,21 @@ body {
     justify-content: center;
     gap: 5px;
     margin-bottom: -40px;
+}
+
+.picture-reel {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.picture-reel img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid var(--hover-color);
+    border-radius: 12px;
 }
 
 .description p{
@@ -208,4 +224,12 @@ hr {
     #download-button {
         max-width: 100%;
     }
+
+    .picture-reel {
+    display: grid;
+    flex-direction: row;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+}
 }
