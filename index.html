@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YT Time Pinner</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,10 +24,12 @@
     <main>
         <div class="main-content">
             <div class="download-container">
-                <button class="download-button"><img style="object-fit: contain; height: 50px;" src="images/chrome-icon.png" alt="chrome-icon"><a href="x.com">Download on <br><b> chrome Store</b></a></button>
+                <div class="left-side-elements">
+                    <h1>YT Time Pinner</h1>
+                    <h2>Bookmark specific moments in any video!</h2>
+                </div>
+                <div id="download-button" style="cursor: pointer;"><img id="download-button-icon" src="images/chrome-icon.png" alt="chrome-icon"><p>Download on <br>chrome Store</p></div>
             </div>
-            <h1>YT Time Pinner</h1>
-            <h2>Bookmark specific moments in any video!</h2>
             <div class="description">
                 <p>Save exact timestamps instantly with dedicated buttons built right into the YouTube player.</p>
                 <ul>

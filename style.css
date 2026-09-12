@@ -61,25 +61,46 @@ body {
     object-fit: contain;
 }
 
-.download-button a {
-        text-decoration: none;
 
-}
-
-.download-button {
-    height: auto;
+#download-button {
+    height: 80px;
     width: 200px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     background-color: var(--border-color);
-    color: var(--hover-color);
     border-radius: 10px;
+    color: var(--text-color);
+    user-select: none;
+    margin-top: 50px;
 }
 
-.main-content , .download-container {
-    max-width: fit-content;
+#download-button:active {
+    background-color: #b11313;
+}
+
+#download-button-icon {
+    object-fit: contain;
+    height: 50px;
+}
+
+#download-button:hover #download-button-icon{
+    animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main-content {
+    max-width: 1000px;
+    width: 100%;
     border-radius: 20px;
     background-color: var(--secondary-color);
     display: flex;
@@ -90,19 +111,37 @@ body {
     padding: 20px 80px;
 }
 
-.main-content h1 {
-    font-size: 4rem;
+.left-side-elements h1 {
+    font-size: 3rem;
+    margin: 0;
 }
 
-.main-content h2 {
+.left-side-elements h2 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.download-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.download-container .left-side-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: -40px;
 }
 
 .description p{
     text-align: center;
     font-size: 1.5rem;
-    margin-top: -15px;
 }
 
 .description {
@@ -129,9 +168,10 @@ hr {
     width: 70%;
     opacity: 10%;
 }
-@media screen and (min-width: 390px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     .container {
-        height: 100%;
+        width: 100%;
+        padding: 20px 10px;
     }
     .container .navbar {
         flex-direction: row;
@@ -141,5 +181,31 @@ hr {
     }
     #logo {
         width: 50px;
+    }
+    .main-content {
+        padding: 20px 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .download-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .download-container .left-side-elements {
+        align-items: center;
+    }
+    .main-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    .main-content h2 {
+        font-size: 1.1rem;
+    }
+    #download-button {
+        max-width: 100%;
     }
 }
